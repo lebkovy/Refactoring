@@ -1,1 +1,40 @@
-<p>better-card works!</p>
+<div class="app-card">
+    <div class="icons">
+        <div class="discount-div">
+            <i class="fas fa-tag"></i>
+            <div class="discount-number">{{discount}}% discount</div>
+        </div>
+        <i class="fas fa-share-square"></i>
+    </div>
+    <div class="image"></div>
+    <div class="stars">
+        <div *ngFor="let star of stars">
+            <i (click)="rateProduct(star)" [class.star-yellow]="star <= rate" class="fas fa-star"></i>
+        </div>
+    </div>
+    <div class="heading">
+        <div class="title">
+            {{productTitle}}
+        </div>
+        <div class="subtitle">
+            {{productSubtitle}}
+        </div>
+    </div>
+    <div class="price">
+        <div class="old-price">
+            {{oldPrice | currency}}
+        </div>
+        <div class="new-price">
+            {{newPrice | currency}}
+        </div>
+    </div>
+    <div class="sizes">
+        <div *ngFor="let size of sizes">
+            <div (click)=selectSize(size) [class.size-box-selected]="size === selectedSize"
+                 class="size-box">{{size}}</div>
+        </div>
+    </div>
+    <div class="button">
+        I want this
+    </div>
+</div>
