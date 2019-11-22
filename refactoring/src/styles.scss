@@ -1,8 +1,9 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
 
 body {
   overflow-y: hidden;
-  background-color: lighten(black, 3);
-  font-family: 'Roboto', sans-serif;
+  background-color: #F8F8F8;
+  font-family: 'Alata', sans-serif;
 }
